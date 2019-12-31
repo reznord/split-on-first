@@ -1,0 +1,39 @@
+{
+	"name": "bms-split-on-first",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"description": "Split a string on the first occurance of a given separator",
+	"license": "MIT",
+	"repository": "reznord/split-on-first",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd",
+		"build:copy-files": "cp package.json dist/package.json",
+		"babel:build": "npm run build:commonjs && npm run build:copy-files",
+		"build:commonjs": "babel index.js --out-dir dist/ --source-maps inline --copy-files",
+		"clean:build": "rm -rf dist",
+		"build": "npm run clean:build && npm run babel:build"
+	},
+	"keywords": [
+		"split",
+		"string",
+		"first",
+		"occurrence",
+		"separator",
+		"delimiter",
+		"text"
+	],
+	"devDependencies": {
+		"@babel/cli": "^7.7.7",
+		"@babel/core": "^7.7.7",
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
+		"@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+		"@babel/plugin-transform-arrow-functions": "^7.7.4",
+		"@babel/preset-env": "^7.7.7",
+		"ava": "^2.4.0",
+		"tsd": "^0.10.0",
+		"xo": "^0.25.3"
+	}
+}
