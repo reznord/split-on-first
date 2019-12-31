@@ -1,5 +1,3 @@
-# split-on-first [![Build Status](https://travis-ci.com/sindresorhus/split-on-first.svg?branch=master)](https://travis-ci.com/sindresorhus/split-on-first)
-
 > Split a string on the first occurrence of a given separator
 
 This is similar to [`String#split()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), but that one splits on all the occurrences, not just the first one.
@@ -50,3 +48,7 @@ The separator to split on.
 ## Related
 
 - [split-at](https://github.com/sindresorhus/split-at) - Split a string at one or more indices
+
+## Note
+
+Thanks to Sindresorhus (https://github.com/sindresorhus/split-on-first) for the repo
