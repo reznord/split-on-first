@@ -9,7 +9,12 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "xo && ava && tsd",
+		"build:copy-files": "cp package.json dist/package.json",
+		"babel:build": "npm run build:commonjs && npm run build:copy-files",
+		"build:commonjs": "babel index.js --out-dir dist/ --source-maps inline --copy-files",
+		"clean:build": "rm -rf dist",
+		"build": "npm run clean:build && npm run babel:build"
 	},
 	"files": [
 		"index.js",
